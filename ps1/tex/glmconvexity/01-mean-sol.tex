@@ -1,0 +1,20 @@
+\begin{answer}
+
+\begin{eqnarray*}
+	The sum of probabilities for y given x is 1
+	\[\int p(y\mid x; \theta)dy &=& 1\]
+	Substituting for exponential family
+	\[\int b(y)\exp(\eta^T y - a(\eta))dy &=& 1\]
+	arranging equation
+	\[\int b(y) \exp(\eta^T y)dy &=& exp(a(\eta))\]
+	taking derivative w.r.t eta
+	\[ \frac{\partial a(\eta}{\partial\eta} \int b(y) \exp(\eta^T y)dy &=& \frac{\partial a(\eta}{\partial\eta} exp(a(\eta))\]
+	\[\int y b(y) \exp(\eta^T y)dy &=& \frac{\partial a(\eta}{\partial\eta} exp(a(\eta))\]
+	Rearranging eq form 
+	\[ \frac{\partial a(\eta}{\partial\eta} &=& \int y b(y)\exp(\eta^T y - a(\eta))dy &=& 1\] 
+	additional term y, exp family probability form
+	\[&=& \int y p(y\mid x; \theta) dy \]
+	\[\frac{\partial a(\eta}{\partial\eta} &=& E[y\mid x: \theta] \]
+\end{eqnarray*} 
+
+\end{answer}

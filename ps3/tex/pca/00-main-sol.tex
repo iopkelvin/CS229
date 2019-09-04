@@ -1,0 +1,17 @@
+\begin{answer}
+
+\begin{eqnarray*}
+
+arg \underset{u:u^T u=1}{\operatorname{min}} \sum_{i=1}^n \parallel x^{(i)} - f_u (x{(i)}) \parallel_2^2 \\
+
+&=& arg \underset{u:u^T u=1}{\operatorname{min}} \sum_{i=1}^n \parallel x^{(i)} - u^T x{(i)} u \parallel_2^2 \\
+&=& arg \underset{u:u^T u=1}{\operatorname{min}} \sum_{i=1}^n ( x^{(i)} - u^T x{(i)} u)^T ( x^{(i)} - u^T x{(i)} u ) \\
+&=& arg \underset{u:u^T u=1}{\operatorname{min}} \sum_{i=1}^n ( x^{(i) T}x^{(i)} - ( (u^T x^{(i)}) u )^T x^{(i)} - x^{(i)}^T((u^T x^{(i)}) u) + (( u^T x^{(i)}) u)^T ((u^T x^{(i)}) u)) \\
+&=& arg \underset{u:u^T u=1}{\operatorname{min}} \sum_{i=1}^n ( x^{(i) T}x^{(i)}) - 2(u^T x^{(i)}) (u^T x^{(i)}) + (u^T x^{(i)})^2 (u^T u) \\
+&=& arg \underset{u:u^T u=1}{\operatorname{min}} \sum_{i=1}^n ( x^{(i) T}x^{(i)}) - 2 (u^T x^{(i)})^2 + (u^T x^{(i)})^2  \\
+&=& arg \underset{u:u^T u=1}{\operatorname{min}} \sum_{i=1}^n ( x^{(i) T}x^{(i)}) - (u^T x^{(i)})^2  \\
+&=& arg \underset{u:u^T u=1}{\operatorname{max}} \sum_{i=1}^n ( x^{(i) T}x^{(i)}) (u^T x^{(i)})^2  \\
+&=& arg \underset{u:u^T u=1}{\operatorname{max}} u^T ( \sum_{i=1}^n  x^{(i)} x^{(i) T} ) u  \\
+
+\end{eqnarray*}
+\end{answer}

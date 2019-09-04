@@ -1,0 +1,29 @@
+\begin{answer}
+
+\[J(\theta) = -\frac{1}{\nexp} \sum_{i=1}^\nexp \left(y^{(i)}\log(h_{\theta}(x^{(i)})) +  (1 - y^{(i)})\log(1 - h_{\theta}(x^{(i)}))\right)\]
+\[\frac{\partial J(\theta)}{\partial x_i} = \Sigma-(y - h(x)x_i\]
+\[H_i_j =  \frac{\partial^2 J(\theta)}{\partial x^2}\] 
+\[=\Sigma(\frac{\partial h(x)}{\partial \theta_j)}x_i  \]
+\[=\Sigma (h(x)(1 - h(x)) x_jx_i \]
+		Assume
+\[x_ix_j = X_i_j \]  
+\[=\Sigma (h(x)(1 - h(x)) xx^T\]
+
+\[z^THz \geq 0\]
+		is always positive-semidefinite when H \geq 0
+		
+\[z^THz =  z^T(\Sigma (h(x)(1 - h(x)) xx^T)z\]
+\[=\Sigma (h(x)(1 - h(x)) (z^Txx^Tz)\]
+\[=\Sigma (h(x)(1 - h(x)) (x^Tz)^2\]
+
+\[(x^Tz)^2\]  
+ 		is positive, and \[h(x)(1 - h(x)\] 
+ 		is a bernoulli probability 
+ where:
+\[0 \leq h(x) \leq 1\] 
+ Therefore, the value of that replaces the hessian determines whether $z^THz$  is positive semidefinite, or negative semidefinite. In this case the Hessian is positive semidefinite.
+So, 
+\[z^THz \geq 0\]
+
+\end{answer}
+

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1c53c549-699c-4385-a078-8e8a9108c90b" name="Default Changelist" comment=" &#10; [&#10; &#10;?≥≤n">
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ps1/tex/linearclass/04-gda-ll-sol.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../ps1/tex/linearclass/04-gda-ll-sol.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ica/ica.py" beforeDir="false" afterPath="$PROJECT_DIR$/ica/ica.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k_means/k_means.py" beforeDir="false" afterPath="$PROJECT_DIR$/k_means/k_means.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/semi_supervised_em/gmm.py" beforeDir="false" afterPath="$PROJECT_DIR$/semi_supervised_em/gmm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tex/cartpole/00-main-sol.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../tex/cartpole/00-main-sol.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tex/ica/01-gaussian-sol.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../tex/ica/01-gaussian-sol.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tex/ica/02-laplace-sol.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../tex/ica/02-laplace-sol.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tex/ica/03-cocktail-sol.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../tex/ica/03-cocktail-sol.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tex/k_means/01-k_means_impl_sol.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../tex/k_means/01-k_means_impl_sol.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tex/k_means/02-compression_factor_sol.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../tex/k_means/02-compression_factor_sol.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tex/kl_divergence/01-nonnegative_sol.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../tex/kl_divergence/01-nonnegative_sol.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tex/kl_divergence/02-chain_rule_sol.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../tex/kl_divergence/02-chain_rule_sol.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tex/kl_divergence/03-max_likelihood_sol.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../tex/kl_divergence/03-max_likelihood_sol.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tex/pca/00-main-sol.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../tex/pca/00-main-sol.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tex/semi_supervised_em/01-convergence-sol.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../tex/semi_supervised_em/01-convergence-sol.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tex/semi_supervised_em/02-e-step-sol.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../tex/semi_supervised_em/02-e-step-sol.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tex/semi_supervised_em/03-m-step-sol.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../tex/semi_supervised_em/03-m-step-sol.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tex/semi_supervised_em/04-impl-unsupervised-sol.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../tex/semi_supervised_em/04-impl-unsupervised-sol.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tex/semi_supervised_em/05-impl-semi-supervised-sol.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../tex/semi_supervised_em/05-impl-semi-supervised-sol.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tex/semi_supervised_em/06-comparison-sol.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../tex/semi_supervised_em/06-comparison-sol.tex" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>log</find>
+      <find>data</find>
+      <find>output</find>
+      <find>pred</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/k_means/k_means.py" />
+        <option value="$PROJECT_DIR$/semi_supervised_em/gmm.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="720" />
+    <option name="width" value="720" />
+    <option name="height" value="900" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="src" type="b2602c69:ProjectViewProjectNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="semi_supervised_em" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1c53c549-699c-4385-a078-8e8a9108c90b" name="Default Changelist" comment="" />
+      <created>1564869098860</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1564869098860</updated>
+      <workItem from="1564869103164" duration="15048000" />
+      <workItem from="1565457241293" duration="25000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="15073000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="720" y="0" width="720" height="900" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.044247787" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32920793" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.12376238" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/cartpole/cartpole.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="379" column="10" lean-forward="true" selection-start-line="379" selection-start-column="10" selection-end-line="379" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/k_means/k_means.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="124" column="26" selection-start-line="124" selection-start-column="26" selection-end-line="124" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/semi_supervised_em/gmm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2000">
+          <caret line="288" column="54" lean-forward="true" selection-start-line="288" selection-start-column="54" selection-end-line="288" selection-end-column="54" />
+          <folding>
+            <element signature="e#1#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ica/ica.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

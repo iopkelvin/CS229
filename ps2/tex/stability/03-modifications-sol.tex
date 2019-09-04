@@ -1,0 +1,12 @@
+\begin{answer}
+
+i. No, different Learning rate: A constant learning rate will not help the coefficients converge. The constant learning rate will not prevent the parameters from continuing to increase to infinity. 
+
+ii. No, decreasing the learning rate will usually cause the convergence to happen faster, however for dataset B, this won't help, as the classes are well separated, and reducing learning rate will not prevent the parameters from going to infinity values
+
+iii. No, scaling the input features will not help in un-doing the separation of the classes. Scaling will transform the data, however, it will maintain similar proportions and the separation will still be present. Scaling the input features might even create more separation of the classes.
+
+iv. Yes, adding regularization will help change the objective function changes with respect to the separation of the data. The objective will become "convex" even if the data is separated. The regularization will add penalty on the coefficient, and it will reduce the coefficient until it converges.
+
+v.  Yes, adding zero mean gaussian noise might be able to help add data points to either class, and reduce the complete separation of the classes. The zero mean gaussian will only help if the noise added causes the data points for both classes to be more spread and not only belong to a single class.
+\end{answer}

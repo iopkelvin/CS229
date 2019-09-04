@@ -1,0 +1,15 @@
+\begin{answer}
+
+\begin{eqnarray*}
+\underset{\theta}{\operatorname{argmin}} K L (\hat{P} \| P_{\theta}) &=& \underset{\theta}{\operatorname{argmin}} \sum_x \hat{P}(x) \log \frac{\hat{P}(x)}{P_{\theta}(x)} \\
+&=& \underset{\theta}{\operatorname{argmin}} \sum_x \hat{P}(x) \log \hat{P}(x) - \hat{P}(x) \log P_{\theta}(x)  \\
+&=& \underset{\theta}{\operatorname{argmin}} \sum_x - \hat{P}(x) \log \frac{P_{\theta}(x)}{\hat{P}(x)} \\
+&=& \underset{\theta}{\operatorname{argmax}} \sum_x \hat{P}(x) \log \frac{P_{\theta}(x)}{\hat{P}(x)} \\
+&&\hspace*{-63pt}\text{We are given that $\hat{P}(x) = \frac{1}{n} \sum_{i=1}^n 1\{x^{(i)} = x\}$} \\
+&=& \underset{\theta}{\operatorname{argmax}} \sum_x \frac{1}{n} \sum_{i=1}^n 1\{x^{(i)} = x\} \log \frac{P_{\theta} (x)}{\frac{1}{n} \sum 1\{x^{(i)} = x\} } \\
+&=& \underset{\theta}{\operatorname{argmax}} \frac{1}{n} \sum_{i=1}^n \sum_x  1\{x^{(i)} = x\} \log P_{\theta}(x^{(i)})  \\
+&=&\underset{\theta}{\operatorname{argmax}} \frac{1}{n} \sum_{i=1}^n \log P_{\theta}(x^{(i)}) \\
+\underset{\theta}{\operatorname{argmin}} K L (\hat{P} \| P_{\theta}) &=& \underset{\theta}{\operatorname{argmax}} \sum_{i=1}^n \log P_{\theta}(x^{(i)}) \\
+\end{eqnarray*}
+
+\end{answer}

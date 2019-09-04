@@ -1,0 +1,17 @@
+\begin{answer}
+log likelihood \[ \ell(\theta) = log p(y^i\mid x^i;\theta) \]
+\[\frac{\partial \ell(\theta)}{\partial \theta_j} = \frac{\partial log p(y^i\mid x^i;\theta)}{\partial \theta_j} \]
+using Exponential family
+\[= \frac{\partial log(b(y) exp(\eta^T T(y) - a(\eta)}{\partial \theta_j} \]
+substituting for poisson
+\[= \frac{\partial log(\frac{1}{y^!} exp(\eta^T y - e^\eta)}{\partial \theta_j} \]
+Substitute eta and separate terms
+\[= \frac{\partial log(exp((\theta^T x)^T y - e^{\theta^T x})}{\partial \theta_j} + \frac{\partial log(\frac{1}{y^!})}{\partial \theta_j} \]
+cancel term and cancel log and exp
+\[= \frac{\partial ((\theta^T x)^T y - e^{\theta^T x})}{\partial \theta_j} \]
+\[= \frac{\partial ((\Sigma \theta_i x_i)y - e^{\theta^T x})}{\partial \theta_j} \]
+\[= \frac{\partial ((\theta^T x_j)^T y - e^{\theta^T x})}{\partial \theta_j} \]
+\[ \frac{\partial \ell(\theta)}{\partial \theta_j} = (y - e^{\theta^T x})x_j \]
+The stochastic gradient ascent takes the form
+\[ \theta_j := \theta_j + \alpha(y - e^{\theta^T x})x_j \]
+\end{answer}

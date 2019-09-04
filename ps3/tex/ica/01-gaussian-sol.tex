@@ -1,0 +1,29 @@
+\begin{answer}
+\begin{eqnarray*}
+\ell(W) &=& n log\|W\| + \sum_{i=1}^n \sum_{j=1}^d log \frac{1}{\sqrt{2\pi}} exp( -\frac{1}{2} (w_j^T x^{(i)} )^2) \\
+&=& n log\|W\| + C - -\frac{1}{2}  \sum_{i=1}^n \sum_{j=1}^d (w_j^T x^{(i)} )^2 \\
+&&\hspace*{-63pt} \text{Taking derivative wrt w} \\
+\frac{\partial\ell(W) }{\partial W} &=& n W^{-T} - \frac{1}{2} \sum_{i=1}^n \begin{bmatrix}
+    \frac{\partial (w_1^T x^{(i)})^2 }{\partial w_1} \\ 
+    \vdots \\
+    \frac{\partial (w_d^T x^{(i)})^2 }{\partial w_d} \\ 
+\end{bmatrix} \\
+&=& n W^{-T} - \frac{1}{2} \sum_{i=1}^n \begin{bmatrix}
+    2(w_1^T x^{(i)}) x^{(i)}^T \\
+    \vdots \\
+    2(w_d^T x^{(i)}) x^{(i)}^T \\
+\end{bmatrix} \\
+&=& n W^{-T} - \sum_{i=1}^n \begin{bmatrix}
+    w_1^T (x^{(i)} x^{(i)}^T) \\
+    \vdots \\
+    w_d^T (x^{(i)} x^{(i)}^T) \\
+\end{bmatrix} \\
+&=& n W^{-T} - W \sum_{i=1}^n x^{(i)}x^{(i)}^T \\ 
+&=& n W^{-T} - WX^TX \\
+&&\hspace*{-63pt} \text{We have that $n W^{-T} - WX^TX = 0$} \\
+n W^{-T} &=& WX^TX \\
+n W^{-T} W^{(-1)} &=& X^T X \\
+ &&\hspace*{-63pt} \text{Arranging order} \\
+ W^T W &=& (\frac{1}{n} X^T X)^{-1}
+\end{eqnarray*}
+\end{answer}

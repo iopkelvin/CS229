@@ -1,0 +1,11 @@
+\begin{answer}
+
+\begin{eqnarray*}
+&&\hspace*{-63pt}\text{We have that} \\
+w_j^{(i)} &=& p(z^{(i)} = j\mid x^{(i)} ; \phi, \mu, \Sigma)  \\
+&=& \frac{p(x^{(i)} \mid z^{(i)} = j\mid x^{(i)} ; \phi, \mu, \Sigma) p(z^{(i)} = j; \theta)} {\sum_{l=1}^k p(x^{(i)} \mid z^{(i)} = l ;\mid x^{(i)} ; \phi, \mu, \Sigma) p(z^{(i)}  = l ; \theta)} \\
+&=& \frac{ \frac{1} {\sqrt{(2\pi)^d\mid\Sigma_j\mid}} exp ( - \frac{1} {2} (x^{(i)} - \mu_j)^T \Sigma_j^{-1} (x^{(i)} -\mu_j))\phi_j } {\sum_{l=1}^k \frac{1} {\sqrt{(2\pi)^d\mid\Sigma_l\mid}} exp ( - \frac{1} {2} (x^{(i)} - \mu_l)^T \Sigma_l^{-1} (x^{(i)} -\mu_l))\phi_l} \\
+&=& \frac{\mid\Sigma_j\mid^{-1} exp ( - \frac{1} {2} (x^{(i)} - \mu_j)^T \Sigma_j^{-1} (x^{(i)} -\mu_j))\phi_j } {\sum_{l=1}^k\mid\Sigma_l\mid^{-1} exp ( - \frac{1} {2} (x^{(i)} - \mu_l)^T \Sigma_l^{-1} (x^{(i)} -\mu_j))\phi_l }
+\end{eqnarray*}
+
+\end{answer}

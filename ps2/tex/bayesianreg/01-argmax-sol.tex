@@ -1,0 +1,18 @@
+\begin{answer}
+
+\text{posterior distribution $\phi(\theta\mid x,y)$}
+\begin {equation}
+\begin {split}
+\phi_{MAP} & = argmax p(\theta\mid x, y)   \label{this}\\     
+& = argmax \frac{p(y\mid x, \theta) p(\theta\mid x)}{p(y\mid x)} \\
+& = argmax  p(y\mid x, \theta) p(\theta) 
+\end {split}
+\end {equation}
+We first use the Bayes rule to arrange $p(\theta \mid x, y)$
+
+We don't take into account the denominator $p(y\mid x)$, as it is a positive constant. To get the posterior probability, we can ignore the denominator, as p(y) has no $\theta$ determinant.
+
+Since we assume that x and $\theta$ are marginally independent; $p(\theta) = p(\theta\mid x)$
+\[ \phi_{MAP} & = argmax p(\theta\mid x, y) & = argmax  p(y\mid x, \theta) p(\theta)  \]
+
+\end{answer}

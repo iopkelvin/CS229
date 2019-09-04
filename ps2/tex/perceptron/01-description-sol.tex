@@ -1,0 +1,44 @@
+\begin{answer}
+
+We know that the update rule of theta can represented as:
+\[\theta : \theta + \alpha(y - h_x) (x)\]
+Taking $\phi(x)$ as the mapping of x, we have that the update of $\theta$ in the high dimensional space is:
+\[\theta := \theta + \alpha(y - h_{\theta} (\phi(x)) \phi(x) \]
+i. 
+
+We start initializing $\theta^0 = 0$
+\[\theta^0 = 0 \]
+\[\theta^1 := \theta^0 + \alpha(y - h_{\theta} (\phi(x)) \phi(x) \]
+Replacing:
+\[\alpha(y - h_{\theta} (\phi(x)) = B_j^1 \]
+we have:
+\[\theta^1 = B_j^1 \phi(x) \]
+Following:
+\[\theta^2 = \theta^1 + \alpha(y - h_{\theta} (\phi(x))) \phi(x) \]
+We do replacement again: $\alpha(y - h_{\theta} (\phi(x))) = B_j^2$
+\[\theta^2 = B_j^1 \phi(x) + B_j^2 \phi(x) \]
+Given this, we know that $\theta$ will always be a linear combination of $\phi(x)$ on every iteration
+
+
+ii. 
+
+\[h_{\theta^i}(x^{(i+1)}) = g(\theta^{(i)}^T \phi(x^{(i+1)})) = g(B_j^i \phi(x^i)^T\phi(x)^{(i+1)}) \]
+We can view this as a kernel
+
+Since we saw that $\theta^{i} = \sum B_j \phi(x)$
+\[ = g(K(\theta^{(i)},\phi(x^{(i+1)}))) \]
+\[ h_{\theta^i}(x^{(i+1)}) = g(\sum{B_j} K(\phi(x^i), \phi(x)^{(i+1)}))\]
+We need to solve for $h_{\theta^i}(x^{(i+1)})$
+
+iii.
+
+When $(y- h_{\theta}(\phi(x))$  is zero, it means that example has been classified correctly.
+
+When $(y- h_{\theta}(\phi(x))$ is more than zero, the example is misclassified.
+
+Therefore $\theta$ is only updated on misclassified examples.
+ \[ \theta^{(i)} = \sum B_j\phi(x) \]
+ 
+ 
+
+\end{answer}

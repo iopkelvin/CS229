@@ -1,0 +1,11 @@
+\begin{answer}
+
+\[ \phi_{MAP}= argmin_{\theta} -\log p(y\mid x, \theta) - log p(\theta) \]
+
+\[ = argmin_{\theta} - \log(  \frac{1}{\sqrt{ 2 \sigma^2} } \exp( - \frac{1}{2} \frac{(\vec{y} - \theta^T x)^2}{\sigma^2})) - log (\frac{1}{2b} \exp (- \frac{\Arrowvert \theta \Arrowvert}{b}) \]
+\[ = argmin_{\theta} + \frac {1}{2\sigma^2} (\theta^T x - \vec{y})^2 + \frac {1}{b} \Arrowvert \theta \Arrowvert \]
+\[ = argmin_{\theta} + \frac {1}{2\sigma^2}\Arrowvert \theta X - \vec{y}\Arrowvert_2^2   + \frac {1}{b} \Arrowvert \theta \Arrowvert \]
+\[ = argmin_{\theta} \Arrowvert \theta X - \vec{y}\Arrowvert_2^2 + \frac{2\sigma^2}{b}  \Arrowvert \theta \Arrowvert \]
+From $\Arrowvert \theta X - \vec{y}\Arrowvert_2^2 + \gamma \Arrowvert \theta \Arrowvert$ , we have that The $\gamma$ value is $\frac{2\sigma^2}{b} $
+
+\end{answer}

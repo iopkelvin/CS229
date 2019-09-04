@@ -1,0 +1,31 @@
+\begin{answer}
+
+
+Introducing formulas 
+\[\sum \log p(x^i \mid y^i ; \mu_0, \mu_1, \Sigma) + \Sigma \log p(y^i; \phi) \]
+\[ \Sigma [ \frac{1}{2}\log\frac{1}{\Sigma} -\frac{1}{2}(x^i - \mu_y)^T \Sigma^-1 (x^i - \mu_y ) + y^i\log(\phi) + (1-y^i) * \log(1-\phi)]
+
+wrt phi
+\begin{eqnarray*}
+\[ \frac{\partial\ell}{\partial\phi} &=& \Sigma (\frac{y^i}{\phi} - \frac{1-y^i}{1-\phi}) \] \\
+\[  \frac{\Sigma  1* [y^1 = 1]} {\phi} - \frac{n- \Sigma 1* [y^1 = 1]}{1-\phi} \\ \]
+\[ \phi &=& \frac{1}{n} \Sigma{1* [y^i = 1]} \]
+\end{eqnarray*}
+wrt mu0 and mu1
+
+\begin{eqnarray*}
+\frac{\partial\ell}{\partial\mu_0} &=& -\frac{1}{2} \Sigma \frac{\partial}{\partial\mu_0} (x^i - \mu_0)^T \Sigma^-1 (x^i - \mu_0) \\
+&=& -\frac{1}{2} \Sigma \frac{\partial}{\partial\mu_0} [\mu_0^T\Sigma^-1\mu_0 - x^i\Sigma^-1\mu_0 - \mu_0^T\Sigma^-1 x^i] \\
+&=& -\frac{1}{2} \Sigma \frac{\partial}{\partial\mu_0} tr[\mu_0^T\Sigma^-1\mu_0 - x^i\Sigma^-1\mu_0 - \mu_0^T\Sigma^-1 x^i] \\
+&=& -\frac{1}{2} \Sigma [2\Sigma^-1 \mu_0 - 2\Sigma^-1 x^i]
+\end{eqnarray*}
+
+For Sigma
+\begin{eqnarray*}
+\[\frac{\partial\ell}{\partial\Sigma} &=& \Sigma \frac{\partial}{\partial\Sigma}[ \frac{1}{2}\log\frac{1}{\Sigma} - \frac{1}{2}(x^i - \mu_y)^T 	\frac{1}{\Sigma}(x^i - \mu_y)] \\ &=&  \Sigma \frac{1}{2}\Sigma {\partial}{\partial\Sigma}\frac{1}{\Sigma} - \frac{1}{2} \frac{\partial}{\partial\Sigma} (x^i - \mu_y)^T 	\frac{1}{\Sigma}(x^i - \mu_y)] \\
+	&=& \Sigma \frac{1}{2} {\partial}{\partial\Sigma}\frac{1}{\Sigma}\Sigma^T - \frac{1}{2} \frac{\partial}{\partial\Sigma} (x^i - \mu_y)^T(x^i - \mu_y)] \\
+	&=& \Sigma[\frac{1}{2}[\frac{1}{\Sigma}]^-1 - \frac{1}{2}(x^i - \mu_y)*(x^i - \mu_y)^T] \\
+	&=& \frac{1}{2}\Sigma[\Sigma - (x^i - \mu_y)*(x^i - \mu_y)^T]
+\end{eqnarray*}
+
+\end{answer}

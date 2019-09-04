@@ -1,0 +1,20 @@
+\begin{answer}
+
+\centering
+\text {We have:} 
+\[ \phi_{MAP}= argmax_\theta p(y\mid x, \theta) p(\theta) \]
+
+We can invert to argmin
+\[  = argmin_{\theta} - p(y\mid x, \theta) - p(\theta)\]
+Introducing log
+\[  = argmin_{\theta} -\log p(y\mid x, \theta) - \log p(\theta)\]
+since $p(\theta)$ has a gaussian distribution:
+\[ = argmin_{\theta} -\log p(y\mid x, \theta) - \log (\frac{1}{\sqrt{2\pi \eta^2 I}} \exp(-\frac{1}{2}\frac{\theta^2}{\eta^2 I} )) \]
+Taking the log eliminates the second term
+\[ \phi_{MAP}= argmin_{\theta} -\log p(y\mid x, \theta) + \frac{1}{2 \eta^2 } \mid\mid\theta_2^2\mid\mid \]
+Having that: 
+\[ \phi_{MAP}=  argmin_{\theta} -\log p(y\mid x, \theta) + \lambda \mid\mid\theta_2^2\mid\mid \]
+We find that the value of $\lambda$
+\[ \lambda = \frac{1}{2\eta^2}
+\end{answer}
+

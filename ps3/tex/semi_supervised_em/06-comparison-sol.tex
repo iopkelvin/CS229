@@ -1,0 +1,22 @@
+\begin{answer}
+
+i.  Number of iterations taken to converge:
+Unsupervised EM
+158, 22, 163 iterations on the three trials respectively
+Semi-supervised EM
+24, 125, 26 iterations on the three trials respectively
+
+
+ii. Stability (i.e., how much did assignments change with different random initializations?)
+Unsupervised EM produced different results when clustering the data. Some clusters appear with different classes, although overall they encompass the same group of information.
+Semi-supervised EM produced very similar clusterings on all three trials. They have been assigned to the same classes.
+
+
+iii. Overall quality of assignments.
+Overall I think that the quality of SS EM was more convincing, as it showed plots that unchanging results. Further, those three classes mean that those three groups have some important quality attributes representing those specific classes. The yellow cluster might be less representative or more general. 
+
+As we are given some examples that are labeled, we are better able to approximate the identity of those classes that the labeled exampled provided.
+
+In the other side, Unsupervised EM produced very diverging clusters, which is of little quality, as it can produce confusing results.
+
+\end{answer}

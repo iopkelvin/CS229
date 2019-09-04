@@ -1,0 +1,83 @@
+\begin{answer}
+
+A) Yes, function K is a valid kermel
+\[K(x,z) = K_1(x,z) + K_2(x,z)\]
+The problem states that both $K_1$ and $K_2$ are kernels, therefore $K_1$ and $K_2$ must both be symmetric and positive semidefinite.
+\[z^T K_1z \geq 0 \]
+and
+\[ z^TK_2z \geq 0 \]
+The sum of two positive semidefinite matrices is also symmetric and positive semidefinite.
+As a result, the function K is symmetric and semidefinite, and it is a valid kernel.
+\[z^T K_1z \geq 0 + z^T K_2z \geq 0 \] 
+\[ z^T (K_1 + K_2)z \geq 0 &=& \] 
+\[\[ z^TKz \geq 0 \] 
+
+B) No, K is not a valid kernel
+\[K(x,z) = K_1(x,z) - K_2(x,z)\]
+Substracting a symmetric matrix from another one, will cause the resulting matrix to be negative semidefinite.
+The new function K is not a kernel because it is now negative semidefinite.
+\[z^T K_1z \geq 0 - z^T K_2z \geq 0 \] 
+\[ z^T (K_1 - K_2)z \leq 0 &=& \] 
+\[\[ zKz \leq 0 \] 
+
+C) Yes, K is a valid kernel
+\[K(x,z) = aK_1(x,z)\]
+Since $K_1$ is symmetric and positive semidefinite, and given that a is a positive real number, the resulting multiplication results in function K being both symmetric and positive semidefinite.
+\[z^T K_1z \geq 0 \]
+and $a > 0$
+\[a * z^T K_1z \geq 0 \]
+
+D) No, K is not a valid kernel
+\[ K(x,z) = -aK_1(x,z) \]
+$K_1$ is a kernel, and a is a positive real number; however, the negative turns K into a negative semidefinite matrix function.
+\[ ((-1) * (a>0) * (z^T Kz \geq 0) =\]
+\[ ((-1) * (a*z^T Kz \geq 0) =\]
+\[ -a*z^T Kz \leq 0 \]
+
+E) Yes. K is a valid kernel
+\[K(x,z) = K_1(x,z)K_2(x,z)\]
+Each $K_1$ and $K_2$ are both kernels that are symmetric and positive semidefinite.\\
+\[K_1(x,z) = \phi(x)^T \phi(z) \]
+\[K_1(x,z) = \sum\phi(x_i)\phi(z_i)\]
+\[K_2(x,z) = \phi(x)^T \phi(z) \]
+\[K_2(x,z) = \sum\phi(x_j)\phi(z_j)\]
+Therefore,
+\[K(x,z) = K_1(x,z)K_2(x,z)\]
+\[K(x,z) = \sum\phi(x_i)\phi(z_i)\sum\phi(x_j)\phi(z_j)\] 
+\[ = \sum\sum \phi(x_i)\phi(z_i)\phi(x_j)\phi(z_j)\]
+\[ = \sum\sum \phi(x_i)\phi(x_j)\phi(z_i)\phi(z_j)\]
+Since $X_ij = x_ix_j$,
+\[ = \sum \phi_i_j(x_i) \phi_i_j(z_i) \]
+\[K(x,z) = \phi_i_j(x_i)^T \phi_i_j(z_i) \]
+The final function K is the form of the kernel function
+\[K(x,z) = \langle\phi(x), \phi(z)\rangle \]
+
+F) Yes, K is a valid kernel
+\[K(x,z) = f(x)f(z) \]
+We have that f is a real-valued function, f: $R^n \rightarrow R$.
+Since the f(x) function is a scalar, f(x) x f(z) is equal to $f(x)^Tf(z)$
+\[K(x,z) = f(x)^T f(z) \]
+The function f(X) takes the value of the kernel function, where:
+\[K(x,z) = \langle\phi(x), \phi(z)\rangle \]
+
+G) Yes, K is a valid kernel
+\[K(x,z) = K_3(\phi(x),\phi(z)) \]
+Since $K_3$ is a kernel, $R^d x R^d$, the functions $\phi(x)$ and $\phi(z)$ are also positive semidefinite.
+\[\[ z^T K_3z \geq 0 \] 
+
+
+H) Yes, K is a valid kernel
+\[K(x,z) = p(K_1(x,z))\]
+\[b_1 K_3 (x,z) + . . . + b_{i-1} K_3(x,z)^{i-1} + b_i K_3 (x,z)^i \]
+The polynomial function can be proved by knowing that: 
+
+1) The sum of two kernels is also a kernel
+
+2) The multiplication of a kernel and another positive number is also a kernel. (p(x) is a polynomial over x with positive coefficients.) 
+
+3) The power of a kernel is also a kernel
+Therefore The polynomial of a kernel is also a kernel
+\[\[ z^T K_3z \geq 0 \] 
+
+
+\end{answer}

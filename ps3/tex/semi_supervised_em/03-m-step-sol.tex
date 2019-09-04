@@ -1,0 +1,45 @@
+\begin{answer}
+
+\[ \phi^{(t+1)}, \mu^{(t+1)}, \Sigma^{-1}^{(t+1)} &=& arg \underset{\phi, \mu, \Sigma^{-1}}{\operatorname{max}} \sum_{i=1}^n \sum_{j=1}^k Q_i^{(t)} (z^{(i)}) log{\frac{p(x^{(i)},z^{(i)};\phi,\mu,\Sigma^{-1})}{Q_i^{(t)}(z^{(i)})}} + \sum_{i=1}^{\tilde{n}}\log{ p(x^{(i)}, z^{(i)}; \phi, \mu, \Sigma^{-1})} \]
+We replace $\Sigma^{-1}$ by S 
+\[ = arg \underset{\phi, \mu, S}{\operatorname{max}} \sum_{i=1}^n \sum_{j=1}^k w_j^{(i)} log{ \frac{ \frac{ \sqrt{\mid S_j\mid}}{\sqrt{(2\pi)^n}} \exp{(-\frac{1}{2} (x^{(i)} - \mu_j)^T S_j (x^{(i)} - \mu_j) )} \phi_j} { w_j^{(i)}}} \]
+\[+ \sum_{i=1}^{\tilde{n}}\sum_{j=1}^k \tilde{w}_j^{(i)} log{ \frac{ \frac{\sqrt{\mid S_j\mid}}{\sqrt{(2\pi)^n}} \exp{(-\frac{1}{2} (\tilde{x}^{(i)} - \mu_j)^T S_j (\tilde{x}^{(i)} - \mu_j) )} \phi_j}{ \tilde{w}_j^{(i)}}} \]
+Maximize wrt $\phi$
+\[ \ell(\phi, \beta) = \sum_{i=1}^n \sum_{j=1}^k w_j^{(i)} \log{\phi_j} + \sum_{i=1}^{\tilde{n}} \sum_{j=1}^k \tilde{w}_j^{(i)} \log{\phi_j} + \beta (\sum_{j=1}^k \phi_j -1) + C\] 
+C accounts for additional terms. We then take the derivative wrt to $\phi$
+\[ \frac{\partial \ell (\phi \beta)}{\partial \phi_j} = \sum_{i=1}^n w_j^{(i)} \frac{1}{\phi_j} + \sum_{i=1}^{\tilde{n}}  \tilde{w}_j^{(i)} \frac {1}{\phi_j} + \beta\phi_j \]
+\[ \frac{\partial \ell (\phi \beta)}{\partial \phi_j} = \sum_{i=1}^n w_j^{(i)} \frac{1}{\phi_j} + \sum_{i=1}^{\tilde{n}} \sum_{j=1}^k \tilde{w}_j^{(i)} \frac {1}{\phi_j} + \beta\phi_j \]
+\[ \phi_j = \frac {\sum_{i=1}^n w_j^{(i)} + \sum_{i=1}^{\tilde{n}}}{-\beta} \]
+derivative wrt to $\beta$
+\[ \ell(\phi, \beta) &=& \beta \sum_{j=1}^k \phi_j -1 \]
+\[ \frac{\partial \ell{\phi, \beta}}{\partial \beta} = \sum_{j=1}^k \phi_j - 1 = 0 \]
+replace by $\phi$ value
+\[ \sum_{j=1}^k  \frac {\sum_{i=1}^n w_j^{(i)} + \sum_{i=1}^{\tilde{n}}}{-\beta} = 1 \]
+\[ -\beta = \sum_{j=1}^k \sum_{i=1}^n w_j^{(i)} + \sum_{i=1}^{\tilde{n}} \] 
+We can then obtain $\phi_j^{(t+1)}$
+\begin{eqnarray*}
+\phi_j^{(t+1)} &=& \frac{\sum_{i=1}^n w_j^{(i)} + \sum_{i=1}^{\tilde{n}}} {\sum_{j=1}^k \sum_{i=1}^n w_j^{(i)} + \sum_{i=1}^{\tilde{n}}} \\
+\phi_j^{(t+1)} &=&  \frac{\sum_{i=1}^n w_j^{(i)} + \sum_{i=1}^{\tilde{n}}} {n + \alpha \tilde{n}} \\
+\end{eqnarray*}
+Now it's time to do $\mu$:
+\[ \ell(\mu) = \sum_{i=1}^n w_j^{(i)} (x^{(i)} - \mu_j)^T S_j(x^{(i)} - \mu_j) + \sum_{i=1}^{\tilde{n}} \tilde{w}_j^{(i)} ( \tilde{x}^{(i)} \mu_j)^T S_j(\tilde{x}^{(i)} - \mu_j) + C \]
+\[ \ell(\mu) = \sum_{i=1}^n w_j^{(i)} (-2 x^{(i)} S\mu_j + \mu_j^T S_j\mu_j) + \sum_{i=1}^{\tilde{n}} \tilde{w}_j^{(i)} (-2 \tilde{x}^{(i)} S\mu_j + \mu_j^T S_j \mu_j) + C \]
+We then take the derivative wrt $\mu$
+\[ \frac{\partial \ell \mu} {\partial \mu_j} = -2 \( \sum_{i=1}^n w_j^{(i)} (-S x^{(i)} + S\mu_j) + \sum_{i=1}^{\tilde{n}} \tilde{w}_j^{(i)} (-S \tilde{x}^{(i)} + S\mu_j )\) \]
+\[ 0 = -S \left( \sum_{i=1}^n w_j^{(i)} x^{(i)} + \sum_{i=1}^{\tilde{n}} \tilde{w}_j^{(i)} \tilde{x}^{(i)} \right) + S \left( \sum_{i=1}^n w_j^{(i)} + \sum_{i=1}^{\tilde{n}} \tilde{w}_j^{(i)} \right) \mu_j\]
+We can then get $\mu_j^{(t+1)}$
+\[ \mu_j^{(t+1)} = \frac{\sum_{i=1}^n w_j^{(i)} x^{(i)} + \sum_{i=1}^{\tilde{n}} \tilde{w}_j^{(i)} \tilde{x}^{(i)}} {\sum_{i=1}^n w_j^{(i)} + \sum_{i=1}^{\tilde{n}} \tilde{w}_j^{(i)}} \]
+Finally, it's time for $\Sigma = S_j$
+\[ \ell(S) = \sum_{(i=1}^n w_j^{(i)} ( \log{\mid S_j\mid} - (x^{(i)} - \mu_j)^T S_j (x^{(i)} - \mu_j) ) + \sum_{i=1}^{\tilde{n}} \tilde{w}_j^{(i)} ( \log{\mid S_j\mid}  - (\tilde{x}^{(i)} - \mu_j)^T S_j(\tilde{x}^{(i)} - \mu_j)) + C \]
+\[ \frac{\partial \ell(\S)}{S_j} = \sum_{(i=1}^n w_j^{(i)} (S_j^{(i)} - (x^{(i)} - \mu_j ) (x^{(i)} - \mu_j)^T + \sum_{i=1}^{\tilde{n}} \tilde{w}_j^{(i)} ( S_j^{(i)} - (\tilde{x}^{(i)} - \mu_j)(\tilde{x}^{(i)} -\mu_j)^T) \]
+\[ 0 = - \left( \sum_{(i=1}^n w_j^{(i)} (x^{(i)} -\mu_j)(x^{(i)} - \mu_j)^T + \sum_{i=1}^{\tilde{n}} \tilde{w}_j^{(i)} (\tilde{x}^{(i)} -
+mu_j)^T \right) + \left( \sum_{(i=1}^n w_j^{(i)} + \sum_{i=1}^{\tilde{n}} \tilde{w}_j^{(i)} \right) S_j^{-1} \]
+Replacing S back to $\Sigma$, we can then get $\Sigma_j^{(t+1)}$
+\[ \Sigma_j^{(t+1)} = \frac{\sum_{i=1}^n w_j^{(i)} (x^{(i)} - \mu_j) (x^{(i)} - \mu_j)^T + \sum_{i=1}^{\tilde{n}} \tilde{w}_j^{(i)} (\tilde{x}^{(i)} - \mu_j) (\tilde{x}^{(i)} - \mu_j)^T}{\sum_{i=1}^n w_j^{(i)} + \sum_{i=1}^{\tilde{n}} \tilde{w}_j^{(i)}} \]
+Replacing $\tilde{w}_j$ we get the following parameter updates:
+\[ \phi_j := \frac{\sum_{i=1}^n w_j^{(i)} + \alpha \sum_{i=1}^{\tilde{n}} 1 \{\tilde{z}^{(i)} = j\} }{n + \alpha{\tilde{n}} }\]
+\[ \mu_j := \frac{\sum_{i=1}^n w_j^{(i)} x^{(i)} + \alpha \sum_{i=1}^{\tilde{n}} 1 \{\tilde{z}^{(i)} = j\} x^{(i)} } {\sum_{i=1}^n w_j^{(i)} + \alpha \sum_{i=1}^{\tilde{n}} 1 \{\tilde{z}^{(i)} = j\}} \]
+\[ \Sigma_j := \frac {\sum_{i=1}^n w_j^{(i)} (x^{(i)} - \mu_j)(x^{(i)} - \mu_j)^T + \alpha \sum_{i=1}^{\tilde{n}} 1 \{\tilde{z}^{(i)} = j\} (x^{(i)} - \mu_j)(x^{(i)} - \mu_j)^T} {\sum_{i=1}^n w_j^{(i)} + \alpha \sum_{i=1}^{\tilde{n}} 1 \{\tilde{z}^{(i)} = j\}} \]
+
+\end{answer}
+

@@ -1,0 +1,13 @@
+\begin{answer}
+
+\begin{eqnarray*}
+KL(P(X \mid Y)\mid\mid Q(X \mid Y)) &=& \sum P(x,y) \log \frac{P(x,y)}{Q(x,y)} \\
+&=& \sum P(x,y) \log \frac{P(x)P(y\mid x)}{Q(x)Q(y \mid x)} \\
+&&\hspace*{-63pt}\text{Separating terms:} \\
+&=& \sum P(x,y) \log \frac{P(x)}{Q(x)} + P(x,y) \log \frac{P(y\mid x)}{Q(y \mid x)}  \\
+&=& \sum P(x) P(y\mid x)  \log \frac{P(x)}{Q(x)} + \sum P(x) P(y\mid x) \log \frac{P(y\mid x)}{Q(y \mid x)}  \\
+&=& \sum_x P(x) \log \frac{P(x)}{Q(x)} + \sum_x P(x) \sum_y(P(y\mid x) \log \frac{P(y\mid x)}{Q(y \mid x)})  \\
+KL(P(X \mid Y)\mid\mid Q(X \mid Y)) &=& D_{KL}(P(X) \mid\mid Q(X)) + D_{KL}(P(Y\mid X) \mid\mid Q(Y\mid X))
+\end{eqnarray*}
+
+\end{answer}

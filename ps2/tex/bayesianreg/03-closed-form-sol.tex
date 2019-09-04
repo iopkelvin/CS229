@@ -1,0 +1,19 @@
+\begin{answer}
+
+\text {We have that:}
+\[ \phi_{MAP}= argmin_{\theta} -\log p(y\mid x, \theta) + \frac{1}{2 \eta^2 } \Arrowvert \theta \Arrowvert_2^2 \]
+replacing terms for $p(\vec{y}\mid X, \theta$) as  $\theta \sim (0, \eta^2 I)$ and errors $\sim N(0,\sigma^2)$
+\[ = argmin_{\theta} - \log(  \frac{1}{ \sqrt{2\phi \sigma^2} } \exp( - \frac{1}{2} \frac{(\vec{y} - \theta^T x)^2}{\sigma^2})) + \frac{1}{2\eta^2} \Arrowvert \theta \Arrowvert_2^2 \]
+We can eliminate the first term in the log:
+\[ = argmin_{\theta} - \frac{1}{2} \frac{(\vec{y} - \theta^T x)^2}{\sigma^2} +  \frac{1}{2\eta^2} \Arrowvert \theta \Arrowvert_2^2 \]
+\[ = argmin_{\theta} +  \Arrowvert \theta X - \vec{y} \Arrowvert_2^2 +  \frac{\theta}{\eta^2} \Arrowvert \theta \Arrowvert_2^2 \]
+Now we need to come up with a closed form expression
+\[ = (\theta X - \vec{y})^T (\theta X - \vec{y}) + \frac{\theta^2}{\eta^2}\Arrowvert \theta \Arrowvert_2^2 \]
+
+\[ 2 X^T X \theta - 2 X^T \vec{y} + 2 \frac{\theta^2}{\eta^2} = 0 \]
+rearranging terms, and the derivative of the cost wrt $\theta$
+\[ 2 \theta(X^T X + \frac{\theta^2}{\eta^2}) - 2 X^T \vec{y} = 0\]
+\[ \frac{X^T \vec{y}} {\theta(X^T X + \frac{\theta^2}{\eta^2}) }\]
+\[ (X^T X + \frac{\theta^2}{\eta^2})^{-1}  X^T \vec{y} \]		
+
+\end{answer}

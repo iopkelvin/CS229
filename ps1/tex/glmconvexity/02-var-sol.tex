@@ -1,0 +1,10 @@
+\begin{answer}
+
+\begin{eqnarray*}
+	\frac{\partial^2 A(\eta}{\partial\eta\partial\eta}} &=& \int b(y) \exp(\eta^T T(y) - a(\eta))*T(y)*(T(y) - \frac{\partial a(\eta)}{\partial \eta} dy \\
+	&=& \int p(y\mid \eta)* y * y - \frac{\partial a(\eta)}{\partial \eta} dy \\
+	&=& \int p(y\mid \eta ) * y^2dy - \frac{\partial a(\eta)}{\partial \eta} \int p(y;\eta) y dy \\
+	&=& E[[Y\mid X; \theta]^2] - E^2[Y\mid X; \theta] \\
+	&=& var[Y\mid X; \theta)]
+\end{eqnarray*}
+\end{answer}

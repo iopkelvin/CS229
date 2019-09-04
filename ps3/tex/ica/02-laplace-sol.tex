@@ -1,0 +1,32 @@
+\begin{answer}
+We are given the Laplace Distribution $f_{\mathcal{L}}(s) \frac{1}{2} exp(-\mid s\mid)$. We use this on the likelihood function with input x
+
+\begin{eqnarray*}
+\ell(W) &=& log\|W\| + \sum_{j=1}^d \log\exp{(-\mid w_j^T x^{(i)}\mid) } \\
+&=& log\|W\| - \sum_{j=1}^d \mid w_j^T x^{(i)}\mid
+&&\hspace*{-63pt} \text{Taking derivative wrt w} \\
+\frac{\partial\ell(W) }{\partial W} &=& W^{-T} - \begin{bmatrix}
+    \frac{\partial \mid w_1^T x^{(i)}\mid }{\partial w_1}  \\
+    \vdots \\
+     \frac{\partial \mid w_d^T x^{(i)}\mid }{\partial w_d} \\
+\end{bmatrix}  \\
+&&\hspace*{-63pt} \text{the derivative on of the inside term, and replacing w sign} \\
+&=& W^{-T} - \begin{bmatrix}
+     sign(w_1^T x^{(i)}) x^{(i)}^T  \\
+    \vdots \\
+     sign(w_d^T x^{(i)}) x^{(i)}^T \\
+\end{bmatrix} \\
+&=& W^{-T} - \begin{bmatrix}
+     sign(w_1^T x^{(i)})  \\
+    \vdots \\
+     sign(w_d^T x^{(i)})  \\
+\end{bmatrix} x^{(i)}^T \\
+&&\hspace*{-63pt} \text{After obtaining the gradient, we can see the update as:} \\
+W &=& W + \alpha \left( W^{-T} - \begin{bmatrix}
+     sign(w_1^T x^{(i)})  \\
+    \vdots \\
+     sign(w_d^T x^{(i)})  \\
+\end{bmatrix} x^{(i)}^T  \right) \\
+\end{eqnarray*}
+
+\end{answer}

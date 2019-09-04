@@ -1,0 +1,26 @@
+
+\begin{answer}
+
+\begin{eqnarray*}
+D_{KL} (P\mid\mid Q) &=& \sum P(x) \log \frac{P(x)}{Q(x)} \\
+&=& \sum P(x) \log P(x) - \sum P(x) \log {Q(x)} \\
+&=& \sum - P(x) \log \frac{Q(x)}{P(x)} \\
+D_{KL} (P\mid\mid Q) &=& E[- \log \frac{Q(x)}{P(x)}] \\
+&&\hspace*{-63pt}\text{Applying Jensen's inequality, having - log as the convex function} \\
+E[- \log \frac{Q(x)}{P(x)}] &\geq& - \log E[\frac{Q(x)}{P(x)}] \\
+&\geq& - \log \sum P(x) \frac{Q(x)}{P(x)}  \\
+&\geq& - \log \sum Q(x)  \\
+&\geq& - \log 1  \\
+&\geq& 0 \\
+\end{eqnarray*}
+
+Further, the hint tells us that $f(x) = -\log(x)$ is strictly convex.
+
+As a result, $E[f(X)] = f( E[X])$. It holds true only if $\frac{Q(x)}{P(X)} = E[\frac{Q(x)}{P(x)}]$ with probability 1. 
+
+Consequently, $D_{KL}(P\mid\mid Q) = 0$
+
+
+
+
+\end{answer}
